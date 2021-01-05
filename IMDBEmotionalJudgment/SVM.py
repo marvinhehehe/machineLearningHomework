@@ -125,7 +125,7 @@ if __name__ == '__main__':
                                                                                               train_size=0.7,
                                                                                               test_size=0.3)
     classifier = svm.SVC(C=2, kernel='rbf', gamma=10, decision_function_shape='ovo')
-    #classifier = svm.SVC(C=2, kernel='poly', decision_function_shape='ovo')
+    #classifier = svm.SVC(C=2, kernel='poly', gamma=10, decision_function_shape='ovo')
     classifier.fit(train_data, train_label)
     ans = classifier.predict(testData)
     output()
